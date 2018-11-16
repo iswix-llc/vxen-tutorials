@@ -24,15 +24,14 @@ namespace VXEN.TestApp.Tests
             card.ExpirationYear = "19";
 
             var creditCardSale = new typeCreditCardSale();
-            creditCardSale.Application = Utilities.CreateApplication();
-            creditCardSale.Credentials = Utilities.CreateCredentials();
-            creditCardSale.Terminal = Utilities.CreateTerminal();
+            creditCardSale.Application = Session.Instance.GetApplication<typeApplication>();
+            creditCardSale.Credentials = Session.Instance.GetCredentials<typeCredentials>();
+            creditCardSale.Terminal = Session.Instance.GetTerminal();
             creditCardSale.Transaction = transaction;
             creditCardSale.Card = card;
 
 
-            Server server = new Server();
-            var task = server.SendToApiASync<typeCreditCardSale>(Settings.apiURL, creditCardSale);
+            var task = Server.SendToAPIAsync<typeCreditCardSale>(creditCardSale);
             task.Wait();
 
             XDocument responseDocument = XDocument.Parse(task.Result);

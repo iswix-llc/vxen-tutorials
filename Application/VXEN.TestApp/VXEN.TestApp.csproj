@@ -41,12 +41,12 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="VXEN.Models, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\vxen.1.0.15\lib\net45\VXEN.Models.dll</HintPath>
+    <Reference Include="VXEN.Models, Version=1.0.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\vxen.1.0.21\lib\net45\VXEN.Models.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="VXEN.Services, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\vxen.1.0.15\lib\net45\VXEN.Services.dll</HintPath>
+    <Reference Include="VXEN.Services, Version=1.0.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\vxen.1.0.21\lib\net45\VXEN.Services.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -56,16 +56,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\CheckSaleTest.cs" />
     <Compile Include="Tests\CreditCardSaleTest.cs" />
-    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="secrets.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Secrets.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

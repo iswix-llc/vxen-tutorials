@@ -41,11 +41,11 @@ namespace VXEN.TestApp
             }
         }
 
-        static  public Uri apiURL
+        static  public string apiURL
         {
             get
             {
-                return new Uri(ConfigurationManager.AppSettings["ApiURL"]);
+                return ConfigurationManager.AppSettings["ApiURL"];
             }
         }
 

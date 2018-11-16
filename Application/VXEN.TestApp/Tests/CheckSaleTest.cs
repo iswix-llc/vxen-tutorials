@@ -26,15 +26,14 @@ namespace VXEN.TestApp.Tests
             
 
             var checkSale = new typeCheckSale();
-            checkSale.Application = Utilities.CreateApplication();
-            checkSale.Credentials = Utilities.CreateCredentials();
-            checkSale.Terminal = Utilities.CreateTerminal();
+            checkSale.Application = Session.Instance.GetApplication<typeApplication>();
+            checkSale.Credentials = Session.Instance.GetCredentials<typeCredentials>();
+            checkSale.Terminal = Session.Instance.GetTerminal();
             checkSale.Transaction = transaction;
             checkSale.DemandDepositAccount = demandDepositAccount;
 
 
-            Server server = new Server();
-            var task = server.SendToApiASync<typeCheckSale>(Settings.apiURL, checkSale);
+            var task = Server.SendToAPIAsync<typeCheckSale>(checkSale);
             task.Wait();
 
             string data = task.Result;
