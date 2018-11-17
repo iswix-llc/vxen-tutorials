@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("VXEN.TestApp")]
+[assembly: AssemblyTitle("vxen-console-testapp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VXEN.TestApp")]
+[assembly: AssemblyProduct("vxen-console-testapp")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3914a880-4a6f-4a92-b80b-f5c5d9a324b6")]
+[assembly: Guid("9e426150-b317-4dee-a72a-6c6a1601cbf6")]
 
 // Version information for an assembly consists of the following four values:
 //
