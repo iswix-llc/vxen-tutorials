@@ -1,6 +1,6 @@
 ﻿using TestApp.Common;
-using TestApp.Transaction;
-
+//using TestApp.Transaction;
+using TestApp.Services;
 namespace TestApp
 {
     class Program
@@ -8,8 +8,8 @@ namespace TestApp
         static void Main(string[] args)
         {
             Utility.ConfigureInstance();
-            TransactionSamples.ProcessCreditCardSale();
-
+            //TransactionSamples.ProcessCreditCardSale();
+            ServicesSamples.PaymentAccountCreate();
         }
     }
 }
